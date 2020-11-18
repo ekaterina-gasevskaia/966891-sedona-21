@@ -36,31 +36,29 @@
     <form action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="page-form__acquaintance">
         <legend class="page-form__title">Представьтесь:</legend>
-        <p class="page-form__name">
+        <div class="page-form__name">
           <label for="name">Имя*:</label>
           <input type="text" id="name" name="name" required>
-        </p>
-        <p class="page-form__surname">
+        </div>
+        <div class="page-form__surname">
           <label for="surname">Фамилия*:</label>
           <input type="text" id="surname" name="surname" required>
-        </p>
-        <p class="page-form__patronymic">
+        </div>
+        <div class="page-form__patronymic">
           <label for="patronymic">Отчество:</label>
           <input type="text" id="patronymic" name="patronymic">
-        </p>
+        </div>
       </fieldset>
       <fieldset class="page-form__contacts">
         <legend class="page-form__title">Контактная информация:</legend>
-        <p class="page-form__phone">
+        <div class="page-form__phone">
           <label for="phone">Контактный телефон*:</label>
           <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
-          <button class="page-form__button" type="button"></button>
-        </p>
-        <p class="page-form__email">
+        </div>
+        <div class="page-form__email">
           <label for="email">Электронная почта*:</label>
           <input type="email" id="email" name="email" placeholder="Введите e-mail" required>
-          <button class="page-form__button" type="button"></button>
-        </p>
+        </div>
       </fieldset>
       <fieldset class="page-form__review">
         <legend class="page-form__title">Ваше общее впечатление:</legend>
@@ -100,11 +98,12 @@
           </li>
         </ul>
       </fieldset>
-      <div class="page-form__comment">
-        <label class="page-form__title" for="comment">Опишите свои эмоции:</label>
-        <textarea class="page-form__textarea" id="comment" name="comment"
-                  placeholder="Опишите подробно все свои восторги"></textarea>
-      </div>
+      <fieldset class="page-form__comment">
+        <legend class="page-form__title">
+          <label for="comment">Опишите свои эмоции:</label>
+        </legend>
+        <textarea class="page-form__textarea" id="comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+      </fieldset>
       <button class="page-form__button" type="submit">Отправить отзыв</button>
       <div class="page-form__popup page-form__popup--error">
         <h2 class="page-form__title">Что-то пошло не так!</h2>
