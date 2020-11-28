@@ -1,9 +1,25 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 40px;
+  }
+}
+
 .page-footer__hashtag {
   .font(bold; 21px; 26px; @color-black);
 }
 
 .page-footer__social-list {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  .list-style;
 }
 
 .page-footer__social-item {

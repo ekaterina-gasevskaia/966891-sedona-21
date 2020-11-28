@@ -3,8 +3,13 @@
 }
 
 .appointment__button {
-  .font(bold; 21px; 26px; @color-white);
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
+}
 
-  background-color: @color-blue;
-  border: none;
+.appointment__map {
+  min-height: 320px;
+
+  .background-image (url("../img/map-desktop.jpg.png"); no-repeat; center);
 }
