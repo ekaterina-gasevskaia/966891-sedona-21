@@ -20,7 +20,14 @@
 }
 
 //global
+html {
+  background-color: @color-light-grey;
+}
+
 .page-body {
+  margin: 0;
+  padding: 0;
+
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -30,6 +37,11 @@
   color: @color-light-black;
 
   background-color: @color-white;
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: auto;
+  }
 }
 
 .link {
@@ -48,4 +60,17 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button {
+  width: 280px;
+  height: 58px;
+
+  .font(bold; 21px; 58px; @color-white);
+  font-family: inherit;
+  text-transform: inherit;
+
+
+  background-color: @color-blue;
+  border: none;
 }

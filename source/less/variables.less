@@ -1,9 +1,15 @@
+//Viewports
+@mobile-width: 767px;
+@tablet-width: 768px;
+@desktop-width: 1200px;
+
 // Colors
 @color-white: #FFFFFF;
 @color-light-black: #333333;
 @color-blue: #81B3D2;
 @color-grey: #EEEEEE;
 @color-black: #000000;
+@color-light-grey: #E7E5E5;
 
 //mixin
 .font(@font-weight; @font-size; @line-height; @color) {
@@ -11,4 +17,16 @@
   font-size: @font-size;
   line-height: @line-height;
   color: @color;
+}
+
+.list-style () {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.background-image (@background-image; @background-repeat; @background-position) {
+  background-image: @background-image;
+  background-repeat: @background-repeat;
+  background-position: @background-position;
 }
