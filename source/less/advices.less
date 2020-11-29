@@ -1,5 +1,42 @@
 .advices {
+  padding-left: 69px;
+
   color: @color-light-black;
 
   background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.advices__title {
+  .font(bold; 18px; 26px; @color-black);
+  margin: 0;
+}
+
+.advices__list {
+  .list-style;
+
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    text-align: center;
+  }
+}
+
+.advices__item {
+  width: 240px;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
 }
