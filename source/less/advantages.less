@@ -15,14 +15,19 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
   }
 }
 
 .advantages__wrapper {
   @media (min-width: @tablet-width) {
-    width: 256px;
+    width: 33.3%;
   }
 }
 
@@ -35,21 +40,14 @@
   }
 }
 
-.advantages__image {
-  min-height: 260px;
-
-  .background-image (url("../img/photo-city@1x.png.jfif"); no-repeat; center);
-
-  &--bridge {
-    background-image: url("../img/photo-bridge@1x.png.jfif");
-  }
+.advantages__picture {
+  width: 100%;
 
   @media (min-width: @tablet-width) {
-    min-height: 256px;
-    width: 512px;
+    width: 66.6%;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    width: 800px;
-  }
+.advantages__image {
+  display: block;
 }
