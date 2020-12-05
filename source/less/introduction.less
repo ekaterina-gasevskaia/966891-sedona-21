@@ -5,13 +5,41 @@
 
   min-height: 389px;
 
-  .background-image (url("../img/back-desktop.jpg.jpg"); no-repeat; center);
+  .background-image (url("../img/intro-triangle.svg"), url("../img/back-desktop.jpg"); no-repeat, no-repeat; bottom, center);
 
   @media (min-width: @tablet-width) {
     min-height: 518px;
   }
 }
 
+.introduction__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 270px;
+  min-height: 205px;
+  margin: auto;
+  padding: 32px 0 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 500px;
+  }
+}
+
 .introduction__title {
+  margin: 0;
+
   .font(bold; 18px; 26px; @color-black);
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.introduction__text {
+  margin: 0;
+  padding-top: 30px;
+
+  line-height: 26px;
 }
