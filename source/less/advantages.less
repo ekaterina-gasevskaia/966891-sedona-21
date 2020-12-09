@@ -45,11 +45,22 @@
     width: 33.3%;
     padding-top: 42px;
   }
+
+  @media (min-width: @desktop-width) {
+    &--contrast {
+      padding-top: 47px;
+    }
+
+    &--only-for-desktop {
+      padding-top: 51px;
+    }
+  }
 }
 
 @media (max-width: @mobile-width) {
   .advantages__wrapper--first {
     min-height: 211px;
+    padding-top: 55px;
   }
 }
 
@@ -75,25 +86,36 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 130px;
+    width: 155px;
 
     font-size: 21px;
   }
 }
 
+.advantages__large-screen-port {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.advantages__number {
+  @media (min-width: @tablet-width) {
+    margin: 10px 0 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 11px 0 24px;
+  }
+}
+
 .advantages__text {
   width: 250px;
+  margin: 0;
 
   &--contrast {
     width: 300px;
-  }
-
-  &--port-for-tablet {
-    display: none;
-  }
-
-  &--port-for-desktop {
-    display: none;
   }
 }
 
@@ -105,12 +127,8 @@
       width: 195px;
     }
 
-    &--port-for-tablet {
-      display: block;
-    }
-
-    &--port-for-desktop {
-      display: none;
+    &--large-screens {
+      width: 140px;
     }
   }
 }
@@ -120,28 +138,29 @@
     width: 285px;
 
     &--contrast {
+      width: 280px;
+    }
+
+    &--only-for-desktop {
       width: 230px;
     }
 
-    &--port-for-tablet {
-      display: none;
-    }
-
-    &--port-for-desktop {
-      display: block;
+    &--large-screens {
+      width: 270px;
     }
   }
 }
-
 
 .advantages__picture {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 260px;
 
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
     width: 66.6%;
+    min-height: 256px;
   }
 }

@@ -11,7 +11,7 @@
   <a class="page-header__logo" href="#">
     <img src="img/logotype-mobile.png" width="101.7" height="84" alt="Логотип города Седона.">
   </a>
-  <button class="page-header__toggle page-header__toggle--opened">
+  <button class="page-header__toggle page-header__toggle--closed">
     <span class="visually-hidden">Открыть меню.</span>
   </button>
   <nav class="main-navigation">
@@ -38,7 +38,7 @@
       <div class="advantages__wrapper advantages__wrapper--contrast advantages__wrapper--first">
         <h2 class="advantages__title advantages__title--contrast">Настоящий городок</h2>
         <p class="advantages__number advantages__number---contrast">№1</p>
-        <p class="advantages__text advantages__text--contrast">Седона не аттракцион для туристов,там течёт своя жизнь</p>
+        <p class="advantages__text advantages__text--contrast">Седона не аттракцион для туристов, там течёт своя жизнь</p>
       </div>
       <div class="advantages__picture">
         <img class="advantages__image" src="img/photo-city@1x.jpg" width="800" height="256" alt="">
@@ -53,19 +53,19 @@
         </li>
         <li class="advices__item advices__item-souvenirs">
           <h3 class="advices__title">Сувениры</h3>
-          <p class="advices__text">Не только китайского,<br class="advices__text--port-for-desktop"> но и местного производства!</p>
+          <p class="advices__text">Не только китайского,<br class="advices__port-for-desktop"> но и местного производства!</p>
         </li>
         <li class="advices__item advices__item-food">
           <h3 class="advices__title">Еда</h3>
-          <p class="advices__text">Всегда заказывайте фирменный бургер,<br class="advices__text--port-for-tablet"> вы не разочаруетесь!</p>
+          <p class="advices__text advices__text--only-for-tablet">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
       </ul>
     </article>
     <div class="advantages__content advantages__content--reverse">
-      <div class="advantages__wrapper advantages__wrapper--contrast">
-        <h2 class="advantages__title advantages__title--contrast">Там есть Мост дьявола</h2>
+      <div class="advantages__wrapper advantages__wrapper--contrast advantages__wrapper--only-for-desktop">
+        <h2 class="advantages__title advantages__title--contrast">Там есть<br class="advantages__large-screen-port"> Мост дьявола</h2>
         <p class="advantages__number advantages__number---contrast">№2</p>
-        <p class="advantages__text advantages__text--contrast">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        <p class="advantages__text advantages__text--contrast advantages__text--only-for-desktop">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
       </div>
       <div class="advantages__picture">
         <img class="advantages__image" src="img/photo-bridge@1x.jpg" width="800" height="256" alt="">
@@ -83,7 +83,7 @@
       <li class="advantages__wrapper advantages__wrapper--item">
         <h2 class="advantages__title">Красивая дорога</h2>
         <p class="advantages__number">№4</p>
-        <p class="advantages__text">Ехать в Седону из<br class="advantages__text--port-for-tablet"> Лас-Вегаса совсем<br class="advantages__text--port-for-desktop"> не скучно!</p>
+        <p class="advantages__text advantages__text--large-screens">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </li>
       <li class="advantages__wrapper advantages__wrapper--item">
         <h2 class="advantages__title">Мало туристов</h2>
@@ -95,7 +95,7 @@
   <section class="appointment">
     <div class="appointment__wrapper">
       <h2 class="appointment__title">Заинтересовались?</h2>
-      <p class="appointment__text">Укажите предполагаемые даты поездки,<br class="appointment__text--port-for-tablet"> и мы покажем вам лучшие предложения гостиниц в
+      <p class="appointment__text">Укажите предполагаемые даты поездки,<br class="appointment__large-screen-port"> и мы покажем вам лучшие предложения гостиниц в
         Cедоне</p>
       <button class="button appointment__button">Найти гостиницу</button>
     </div>
@@ -123,15 +123,13 @@
       </a>
     </li>
   </ul>
-  <div class="page-footer__copyright">
-    <a class="link" href="https://htmlacademy.ru/intensive/adaptive" title="Профессиональный онлайн‑курс HTML и CSS, уровень 2.">
+    <a class="page-footer__copyright link" href="https://htmlacademy.ru/intensive/adaptive" title="Профессиональный онлайн‑курс HTML и CSS, уровень 2.">
       <span class="page-footer__copyright-text">Разработано</span>
-      <svg width="26.9" height="34.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+      <svg width="40" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
         <path class="page-footer__copyright-svg" fill="#2E368F"
               d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
       </svg>
     </a>
-  </div>
 </footer>
 </body>
 </html>

@@ -52,28 +52,17 @@
 .advices__text {
   width: 210px;
   margin: 0;
-  padding: 26px 0;
-
-  &--port-for-tablet {
-    display: none;
-  }
-
-  &--port-for-desktop {
-    display: none;
-  }
+  padding: 18px 0 24px;
 }
 
 @media (min-width: @tablet-width) {
   .advices__text {
     width: 194px;
     margin: auto;
+    padding-top: 23px;
 
-    &--port-for-tablet {
-      display: block;
-    }
-
-    &--port-for-desktop {
-      display: none;
+    &--only-for-tablet {
+      width: 155px;
     }
   }
 }
@@ -81,9 +70,13 @@
 @media (min-width: @desktop-width) {
   .advices__text {
     width: 290px;
+  }
+}
 
-    &--port-for-desktop {
-      display: block;
-    }
+.advices__port-for-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
