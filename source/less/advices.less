@@ -1,18 +1,16 @@
 .advices {
-  padding-left: 69px;
+  box-sizing: border-box;
+  min-height: 416px;
+  padding: 35px 0 5px 21.6%;
 
   color: @color-light-black;
 
   background-color: @color-white;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
+    min-height: 330px;
+    padding: 158px 0 5px;
   }
-}
-
-.advices__title {
-  .font(bold; 18px; 26px; @color-black);
-  margin: 0;
 }
 
 .advices__list {
@@ -23,6 +21,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
     flex-wrap: wrap;
 
     text-align: center;
@@ -30,13 +29,144 @@
 }
 
 .advices__item {
-  width: 240px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    width: 33.3%;
+
+    &:nth-child(2) {
+      order: 1;
+    }
+  }
+}
+
+.advices__icon-housing::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -48px;
+
+  width: 39px;
+  height: 37px;
+
+  .background-image (url("../img/icon-house.svg"); no-repeat; center);
+
+  @media (min-width: @tablet-width) {
+    top: -98px;
+    left: 90px;
+
+    width: 75px;
+    height: 72px;
+
+    background-size: contain;
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
+    top: -99px;
+    left: 161px;
+
+    width: 74.7px;
+    height: 72.4px;
+  }
+}
+
+.advices__icon-souvenirs::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -44px;
+
+  width: 32px;
+  height: 38px;
+
+  .background-image (url("../img/icon-gift.svg"); no-repeat; center);
+
+  @media (min-width: @tablet-width) {
+    top: -100px;
+    left: 95px;
+
+    width: 64px;
+    height: 75px;
+
+    background-size: contain;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -100px;
+    left: 167px;
+
+    width: 63px;
+    height: 75.1px;
+  }
+}
+
+.advices__icon-food::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -51px;
+
+  width: 40px;
+  height: 35px;
+
+  .background-image (url("../img/icon-burger.svg"); no-repeat; center);
+
+  @media (min-width: @tablet-width) {
+    top: -95px;
+    left: 90px;
+
+    width: 76px;
+    height: 68px;
+
+    background-size: contain;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -95px;
+    left: 161px;
+
+    width: 76.2px;
+    height: 69px;
+  }
+}
+
+.advices__title {
+  .font(bold; 18px; 26px; @color-black);
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.advices__text {
+  width: 210px;
+  margin: 0;
+  padding: 17px 0 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .advices__text {
+    width: 194px;
+    margin: auto;
+    padding-top: 23px;
+
+    &--only-for-tablet {
+      width: 155px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advices__text {
+    width: 290px;
+  }
+}
+
+.advices__port-for-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
