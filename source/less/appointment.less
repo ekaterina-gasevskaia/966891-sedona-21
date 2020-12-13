@@ -1,5 +1,54 @@
+.appointment__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 287px;
+  padding: 35px 0 5px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 318px;
+    padding-top: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 331px;
+    padding-top: 56px;
+  }
+}
+
 .appointment__title {
   .font(bold; 21px; 26px; @color-black);
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.appointment__text {
+  margin: 0;
+  padding: 21px 0 28px;
+  width: 280px;
+
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+    padding: 33px 0 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 44px;
+  }
+}
+
+.appointment__large-screen-port {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .appointment__button {
@@ -9,7 +58,11 @@
 }
 
 .appointment__map {
-  min-height: 320px;
+  min-height: 350px;
 
-  .background-image (url("../img/map-desktop.jpg.png"); no-repeat; center);
+  .background-image (url("../img/map-desktop.png"); no-repeat; center);
+
+  @media (min-width: @tablet-width) {
+    min-height: 350px;
+  }
 }
