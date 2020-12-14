@@ -9,7 +9,11 @@
 <body class="page-body">
 <header class="page-header">
   <a class="page-header__logo" href="#">
-    <img src="img/logotype-mobile.png" width="101.7" height="84" alt="Логотип города Седона.">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+      <img class="page-header__image" src="img/logotype-mobile.svg" width="101.7" height="84" alt="Логотип города Седона.">
+    </picture>
   </a>
   <button class="page-header__toggle page-header__toggle--closed">
     <span class="visually-hidden">Открыть меню.</span>
@@ -26,7 +30,7 @@
 <main class="page-main">
   <section class="introduction">
     <div class="introduction__image introduction__image--index-page">
-      <img class="introduction__image-greeting" src="img/text-index.png" width="282" height="214" alt="Добро пожаловать!">
+      <img class="introduction__image-greeting" src="img/text-index.svg" width="282" height="214" alt="Добро пожаловать!">
     </div>
     <div class="introduction__wrapper">
       <h1 class="introduction__title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -41,23 +45,33 @@
         <p class="advantages__text advantages__text--contrast">Седона не аттракцион для туристов, там течёт своя жизнь</p>
       </div>
       <div class="advantages__picture">
-        <img class="advantages__image" src="img/photo-city@1x.jpg" width="800" height="256" alt="">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+          <img class="advantages__image" src="img/photo-city.jpg" srcset="img/photo-city@2x.jpg" width="520" height="260" alt="">
+        </picture>
       </div>
     </div>
     <article class="advices">
       <h2 class="visually-hidden">Советы приезжающим в Седону.</h2>
       <ul class="advices__list">
-        <li class="advices__item advices__icon-housing">
-          <h3 class="advices__title">Жильё</h3>
-          <p class="advices__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        <li class="advices__item">
+          <div class="advices__wrapper advices__icon-housing">
+            <h3 class="advices__title">Жильё</h3>
+            <p class="advices__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </div>
         </li>
-        <li class="advices__item advices__icon-souvenirs">
-          <h3 class="advices__title">Сувениры</h3>
-          <p class="advices__text">Не только китайского,<br class="advices__port-for-desktop"> но и местного производства!</p>
+        <li class="advices__item">
+          <div class="advices__wrapper advices__icon-souvenirs">
+            <h3 class="advices__title">Сувениры</h3>
+            <p class="advices__text">Не только китайского,<br class="advices__port-for-desktop"> но и местного производства!</p>
+          </div>
         </li>
-        <li class="advices__item advices__icon-food">
-          <h3 class="advices__title">Еда</h3>
-          <p class="advices__text advices__text--only-for-tablet">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        <li class="advices__item">
+          <div class="advices__wrapper advices__icon-food">
+            <h3 class="advices__title">Еда</h3>
+            <p class="advices__text advices__text--only-for-tablet">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </div>
         </li>
       </ul>
     </article>
@@ -68,7 +82,11 @@
         <p class="advantages__text advantages__text--contrast advantages__text--only-for-desktop">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
       </div>
       <div class="advantages__picture">
-        <img class="advantages__image" src="img/photo-bridge@1x.jpg" width="800" height="256" alt="">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+          <img class="advantages__image" src="img/photo-bridge.jpg" srcset="img/photo-bridge@2x.jpg" width="520" height="260" alt="">
+        </picture>
       </div>
     </div>
   </section>
