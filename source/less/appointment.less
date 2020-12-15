@@ -60,7 +60,12 @@
 .appointment__map {
   min-height: 350px;
 
-  .background-image (url("../img/map-desktop.png"); no-repeat; center);
+  .background-image (url("../img/map-marker.svg"), url("../img/map-desktop.jpg"); no-repeat, no-repeat; center, center);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-marker.svg"), url("../img/map-desktop@2x.jpg");
+    background-size: 27px 27px, 1200px auto;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 350px;

@@ -25,6 +25,11 @@ html {
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
+img {
+  min-width: 100%;
+  height: auto;
+}
+
 .page-body {
   margin: 0;
   padding: 0;
@@ -39,8 +44,13 @@ html {
 
   background-color: @color-white;
 
+  @media (max-width: @mobile-width) {
+    max-width: 520px;
+    margin: auto;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 1200px;
+    width: @desktop-width;
     margin: auto;
   }
 }
