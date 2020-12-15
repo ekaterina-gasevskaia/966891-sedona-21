@@ -7,14 +7,23 @@
 
   min-height: 388px;
 
-  .background-image (url("../img/intro-triangle.svg"), url("../img/back-desktop.jpg"); no-repeat, no-repeat; bottom, center);
+  .background-image (url("../img/intro-triangle.svg"), url("../img/back-desktop.jpg"); no-repeat, no-repeat; bottom, 50% -40px);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-triangle.svg"), url("../img/back-desktop@2x.jpg");
+    background-size: 1200px auto, 1200px auto;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 518px;
+    background-position: bottom, center;
   }
 }
 
 .introduction__image-greeting {
+  width: 282px;
+  height: 214px;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 77px;
@@ -61,7 +70,7 @@
 
 .introduction__text {
   margin: 0;
-  padding-top: 30px;
+  padding-top: 29px;
 
   line-height: 26px;
 }

@@ -17,7 +17,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+
+    &--list {
+      flex-wrap: wrap;
+    }
 
     &--reverse {
       flex-direction: row-reverse;
@@ -31,6 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 2;
   box-sizing: border-box;
   min-height: 167px;
   padding-top: 26px;
@@ -62,7 +66,7 @@
     min-height: 227px;
     padding-top: 71px;
 
-    .background-image (url("../img/white-copy2.svg"); no-repeat; top);
+    .background-image (url("../img/whitecopy2.png"); no-repeat; 50% top);
   }
 }
 
@@ -193,10 +197,25 @@
   align-items: center;
   min-height: 260px;
 
+  line-height: 0;
+
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    width: 66.6%;
     min-height: 256px;
+  }
+}
+
+.advantages__image {
+  width: 520px;
+  height: 260px;
+
+  @media (min-width: @tablet-width) {
+    width: 512px;
+    height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
   }
 }
