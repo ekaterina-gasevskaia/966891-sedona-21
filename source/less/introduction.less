@@ -9,6 +9,11 @@
 
   .background-image (url("../img/intro-triangle.svg"), url("../img/back-desktop.jpg"); no-repeat, no-repeat; bottom, 50% -40px);
 
+  &--other-pages {
+    min-height: 160px;
+    background-position: bottom, 50% -290px;
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro-triangle.svg"), url("../img/back-desktop@2x.jpg");
     background-size: 1200px auto, 1200px auto;
@@ -23,6 +28,11 @@
 .introduction__image-greeting {
   width: 282px;
   height: 214px;
+
+  &--other-pages {
+    width: 229px;
+    height: 39px;
+  }
 
   @media (min-width: @tablet-width) {
     position: absolute;
