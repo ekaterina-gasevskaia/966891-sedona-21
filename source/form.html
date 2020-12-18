@@ -38,8 +38,8 @@
         достопримечательностях</p>
     </div>
   </section>
-  <section class="page-form">
-    <form action="https://echo.htmlacademy.ru" method="post">
+  <section>
+    <form class="page-form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="page-form__form page-form__form--acquaintance">
         <legend class="page-form__title">Представьтесь:</legend>
         <ul class="page-form__list page-form__list--acquaintance">
@@ -60,11 +60,11 @@
       <fieldset class="page-form__form page-form__form--contacts">
         <legend class="page-form__title">Контактная информация:</legend>
         <ul class="page-form__list page-form__list--contacts">
-          <li class="page-form__item phone">
+          <li class="page-form__item page-form__item--contacts phone">
             <label for="phone">Контактный телефон*:</label>
             <input class="page-form__input" type="tel" id="phone" name="phone" placeholder="Введите телефон" required>
           </li>
-          <li class="page-form__item email">
+          <li class="page-form__item page-form__item--contacts email">
             <label for="email">Электронная почта*:</label>
             <input class="page-form__input" type="email" id="email" name="email" placeholder="Введите e-mail" required>
           </li>
@@ -90,19 +90,19 @@
       <fieldset class="page-form__form page-form__form--famous-place">
         <legend class="page-form__title">Посещенные достопримечательности:</legend>
         <ul class="page-form__list page-form__list--famous-place">
-          <li class="page-form__item">
+          <li class="page-form__item page-form__item--famous-place">
             <input class="page-form__checkbox" type="checkbox" id="devils-bridge" name="famous-place" value="devils-bridge" checked>
             <label for="devils-bridge">Мост Дьявола</label>
           </li>
-          <li class="page-form__item">
+          <li class="page-form__item page-form__item--famous-place">
             <input class="page-form__checkbox" type="checkbox" id="mount-bell" name="famous-place" value="mount-bell" checked>
             <label for="mount-bell">Гора-Колокол</label>
           </li>
-          <li class="page-form__item">
+          <li class="page-form__item page-form__item--famous-place">
             <input class="page-form__checkbox" type="checkbox" id="slide-park" name="famous-place" value="slide-park" checked>
             <label for="slide-park">Слайд-парк</label>
           </li>
-          <li class="page-form__item">
+          <li class="page-form__item page-form__item--famous-place">
             <input class="page-form__checkbox" type="checkbox" id="red-rocks" name="famous-place" value="red-rocks">
             <label for="red-rocks">Красные скалы</label>
           </li>
@@ -114,17 +114,20 @@
         </legend>
         <textarea class="page-form__input page-form__input--textarea" id="comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
-      <button class="button button__page-form" type="submit">Отправить отзыв</button>
+      <button class="page-form__button button" type="submit">Отправить отзыв</button>
+      <span class="page-form__note">* — обязательные поля</span>
       <div class="page-form__popup page-form__popup--error">
         <h2 class="page-form__title">Что-то пошло не так!</h2>
         <p class="page-form__popup-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="page-form__button-popup-error button" type="button">Oк</button>
+        <button class="page-form__button-error button" type="button">Oк</button>
       </div>
       <div class="page-form__popup page-form__popup--successfully">
         <h2 class="page-form__title">Ваш отзыв отправлен!</h2>
         <p class="page-form__popup-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
           опубликуем его на сайте.</p>
-        <button class="page-form__button-popup-successfully button" type="button">Закрыть окно</button>
+        <div class="page-form__button-successfully-wrapper">
+          <button class="page-form__button-successfully button" type="button">Закрыть окно</button>
+        </div>
       </div>
     </form>
   </section>
