@@ -9,11 +9,6 @@
 
   .background-image (url("../img/intro-triangle.svg"), url("../img/back-desktop.jpg"); no-repeat, no-repeat; bottom, 50% -40px);
 
-  &--other-pages {
-    min-height: 160px;
-    background-position: bottom, 50% -290px;
-  }
-
   @media (min-resolution: 2dppx) {
     background-image: url("../img/intro-triangle.svg"), url("../img/back-desktop@2x.jpg");
     background-size: 1200px auto, 1200px auto;
@@ -25,14 +20,23 @@
   }
 }
 
+.introduction__image--other-pages {
+  min-height: 157px;
+  background-position: bottom, 50% -290px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+    background-position: bottom;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+  }
+}
+
 .introduction__image-greeting {
   width: 282px;
   height: 214px;
-
-  &--other-pages {
-    width: 229px;
-    height: 39px;
-  }
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -44,6 +48,30 @@
 
   @media (min-width: @desktop-width) {
     width: 459.5px;
+  }
+}
+
+.introduction__image-greeting--other-pages {
+  position: absolute;
+  top: 51px;
+
+  width: 229px;
+  height: 39px;
+
+  @media (min-width: @tablet-width) {
+    top: 95px;
+    left: 1px;
+
+    width: 457px;
+    height: 77.6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 102px;
+    left: -2px;
+
+    width: 459.5px;
+    height: 79px;
   }
 }
 
@@ -68,6 +96,22 @@
   }
 }
 
+.introduction__wrapper--other-pages {
+  width: 290px;
+  min-height: 203px;
+  padding-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 435px;
+    min-height: 235px;
+    padding-top: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 111px;
+  }
+}
+
 .introduction__title {
   margin: 0;
 
@@ -78,9 +122,25 @@
   }
 }
 
+.introduction__title--other-pages {
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
 .introduction__text {
   margin: 0;
   padding-top: 29px;
 
   line-height: 26px;
+}
+
+.introduction__text--other-pages {
+  padding-top: 27px;
+
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 33px;
+  }
 }
