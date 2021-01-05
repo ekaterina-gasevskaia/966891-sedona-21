@@ -483,8 +483,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    justify-content: flex-start;
-    padding: 60px 79px 0 120px;
+    justify-content: space-between;
+    padding: 60px 82px 0 121px;
   }
 }
 
@@ -502,18 +502,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 20%;
-  }
-
-  @media (min-width: @desktop-width) {
-    box-sizing: border-box;
-    width: 25%;
-    padding-left: 86px;
+    width: auto;
+    padding: 0 40px 0 80px;
   }
 }
 
 .page-form__checkbox {
   display: none;
+}
+
+.page-form__label-famous-place {
+  position: relative;
 }
 
 .page-form__checkbox + .page-form__label-famous-place::before {
@@ -529,8 +528,6 @@
   background-color: @color-form-light-grey;
 
   @media (min-width: @desktop-width) {
-    left: 0;
-
     border-radius: 0;
   }
 }
@@ -549,8 +546,6 @@
   .background-image (url("../img/tick.svg"); no-repeat; center);
 
   @media (min-width: @desktop-width) {
-    left: 0;
-
     border-radius: 0;
   }
 }
