@@ -47,6 +47,21 @@
   align-items: center;
 
   height: 48px;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: @color-dark-blue-2;
+  }
+
+  &:active {
+    background-color: @color-dark-blue-3;
+  }
+}
+
+.page-footer__social-path:active {
+  opacity: 0.3;
 }
 
 .page-footer__copyright {
@@ -62,4 +77,14 @@
 
 .page-footer__copyright-path {
   fill: @color-black;
+
+  &:hover,
+  &:focus {
+    fill: @color-blue;
+  }
+
+  &:active {
+    fill: @color-black;
+    opacity: 0.3;
+  }
 }

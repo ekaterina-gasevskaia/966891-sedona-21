@@ -82,6 +82,21 @@
 
   background-color: @color-form-light-grey;
   border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: @color-form-dark-grey;
+  }
+
+  &:active,
+  &:focus {
+    padding-left: 18px;
+
+    background-color: @color-white;
+    border: 4px solid @color-form-dark-grey;
+  }
 }
 
 //acquaintance
@@ -600,16 +615,26 @@
 .page-form__input--textarea {
   width: 280px;
   min-height: 160px;
-  padding: 13px 21px 13px;
+  padding: 13px 22px 13px;
 
   .font(bold; 18px; 26px; @color-black);
   word-spacing: -6px;
 
   resize: none;
 
+  &:active,
+  &:focus {
+    padding-top: 9px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 84.3%;
     padding-top: 18px;
+
+    &:active,
+    &:focus {
+      padding-top: 14px;
+    }
   }
 
   @media (min-width: @desktop-width) {
