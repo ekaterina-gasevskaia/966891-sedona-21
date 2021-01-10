@@ -417,6 +417,14 @@
   }
 }
 
+.page-form__radio:hover + .page-form__label-review::before {
+  background-color: @color-form-dark-grey;
+}
+
+.page-form__radio:active + .page-form__label-review::before {
+  background-color: @color-form-dark-grey-4;
+}
+
 .page-form__radio:checked + .page-form__label-review::before {
   content: "";
   position: absolute;
@@ -435,6 +443,15 @@
 
     background-position: 16px 16px;
   }
+}
+
+.page-form__radio:checked:hover + .page-form__label-review::before {
+  background-color: @color-form-dark-grey;
+}
+
+.page-form__radio:checked:active + .page-form__label-review::before {
+  background-color: @color-form-dark-grey-4;
+  .background-image (url("../img/Shape3.svg"); no-repeat; 17px 17px);
 }
 
 //famous-place
@@ -547,6 +564,14 @@
   }
 }
 
+.page-form__checkbox:hover + .page-form__label-famous-place::before {
+  background-color: @color-form-dark-grey;
+}
+
+.page-form__checkbox:active + .page-form__label-famous-place::before {
+  background-color: @color-form-dark-grey-4;
+}
+
 .page-form__checkbox:checked + .page-form__label-famous-place::before {
   content: "";
   position: absolute;
@@ -563,6 +588,15 @@
   @media (min-width: @desktop-width) {
     border-radius: 0;
   }
+}
+
+.page-form__checkbox:checked:hover + .page-form__label-famous-place::before {
+  background-color: @color-form-dark-grey;
+}
+
+.page-form__checkbox:checked:active + .page-form__label-famous-place::before {
+  background-color: @color-form-dark-grey-4;
+  .background-image (url("../img/tick2.svg"); no-repeat; center);
 }
 
 //comment

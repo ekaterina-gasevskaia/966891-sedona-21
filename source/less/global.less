@@ -100,3 +100,22 @@ img {
 .button:active .button-text {
   opacity: 0.3;
 }
+
+.button-disabled {
+  background-color: @color-form-dark-grey;
+
+  cursor: not-allowed;
+
+  &:hover,
+  &:focus {
+    background-color: @color-form-dark-grey;
+  }
+
+  &:active {
+    background-color: @color-form-dark-grey;
+  }
+}
+
+.button-disabled:active .button-text {
+  opacity: 1;
+}
