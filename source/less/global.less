@@ -83,4 +83,39 @@ img {
 
   background-color: @color-blue;
   border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @color-dark-blue-2;
+  }
+
+  &:active {
+    background-color: @color-dark-blue-3;
+  }
+}
+
+.button:active .button-text {
+  opacity: 0.3;
+}
+
+.button-disabled {
+  background-color: @color-form-dark-grey;
+
+  cursor: not-allowed;
+
+  &:hover,
+  &:focus {
+    background-color: @color-form-dark-grey;
+  }
+
+  &:active {
+    background-color: @color-form-dark-grey;
+  }
+}
+
+.button-disabled:active .button-text {
+  opacity: 1;
 }
