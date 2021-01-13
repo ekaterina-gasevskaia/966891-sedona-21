@@ -1,3 +1,7 @@
+.presentation {
+  line-height: 0;
+}
+
 .presentation__title {
   .font(bold; 18px; 26px; @color-black);
 }
@@ -12,14 +16,44 @@
 .presentation__video-controls {
   position: relative;
 
-  width: 320px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  height: 66px;
   margin: auto;
+  padding: 0 17px 0 19px;
+
+  background-color: @color-form-light-grey;
+}
+
+.presentation__button {
+  .button-without-styles ();
+}
+
+.presentation__button--replay {
+  padding-top: 3px;
+  margin-right: auto;
+}
+
+.presentation__button--subtitle {
+  padding-top: 4px;
+}
+
+.presentation__button--fullscreen {
+  padding-top: 4px;
+  margin-left: 19px;
+}
+
+.presentation__icon-path {
+  fill: @color-icon-dark-grey;
 }
 
 .presentation__wrapper-for-video-progress-bar {
   position: absolute;
-  top: -51px;
-  left: 20px;
+  top: -45px;
+  left: 0;
 
   width: 280px;
   height: 45px;
@@ -41,48 +75,11 @@
 .presentation__video-progress-point {
   position: absolute;
   top: -3px;
-  left: 15%;
+  left: 15.5%;
 
   width: 9px;
   height: 9px;
   border-radius: 50%;
 
   background-color: @color-white;
-}
-
-.presentation__button {
-  position: absolute;
-  z-index: 2;
-
-  .button-without-styles ();
-}
-
-.presentation__button--replay {
-  top: 15px;
-  left: 39px;
-}
-
-.presentation__button--subtitle {
-  top: 16px;
-  right: 88px;
-}
-
-.presentation__button--fullscreen {
-  top: 16px;
-  right: 37px;
-}
-
-.presentation__icon-path {
-  fill: @color-icon-dark-grey;
-}
-
-.presentation__wrapper {
-  position: absolute;
-  top: -6px;
-  left: 20px;
-
-  width: 280px;
-  height: 66px;
-
-  background-color: @color-form-light-grey;
 }
