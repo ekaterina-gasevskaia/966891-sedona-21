@@ -1,5 +1,13 @@
 .gallery {
   padding: 0 6.4%;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 7.8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .gallery__list {
@@ -8,6 +16,42 @@
   margin: auto;
 
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 789px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+  }
+}
+
+.gallery__item {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+
+    background-color: @color-form-light-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    width: 33.33%;
+  }
+}
+
+.gallery__item:first-child {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.gallery__item:nth-child(2n-1):not(:first-child) {
+  @media (min-width: @tablet-width) {
+    background-color: @color-dark-grey-2;
+  }
 }
 
 .gallery__image-wrapper {
@@ -19,26 +63,95 @@
   line-height: 0;
 
   overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    min-height: 267px;
+  }
 }
 
 .gallery__image {
   width: 420px;
   height: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    height: 267px;
+
+    &--first {
+      width: 800px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--first {
+      width: 1200px;
+      height: 400px;
+    }
+  }
+}
+
+.gallery__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 20px;
+    min-height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 1px;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: @color-black-opasity-3;
+  }
 }
 
 .gallery__picture-title {
   .font(bold; 14px; 24px; @color-black);
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    color: @color-white;
+  }
 }
 
 .gallery__picture-author {
+  margin: 0;
+
   line-height: 24px;
   text-transform: none;
+
+  @media (min-width: @desktop-width) {
+    color: @color-white;
+  }
+}
+
+.gallery__likes {
+  box-sizing: border-box;
+  width: 85px;
 }
 
 .gallery__button-likes {
   .button-without-styles ();
+  padding: 0 9px 0 0;
+}
+
+.gallery__icon-likes {
+  @media (min-width: @desktop-width) {
+    fill: @color-white;
+    opacity: 1;
+  }
 }
 
 .gallery__total-likes {
   .font(bold; 14px; 24px; @color-black);
+
+  @media (min-width: @desktop-width) {
+    color: @color-white;
+  }
 }
