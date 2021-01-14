@@ -42,13 +42,13 @@
   }
 }
 
-.gallery__item:first-child {
+.gallery-item--wide {
   @media (min-width: @tablet-width) {
     width: 100%;
   }
 }
 
-.gallery__item:nth-child(2n-1):not(:first-child) {
+.gallery__item:nth-child(2n-1):not(.gallery-item--wide) {
   @media (min-width: @tablet-width) {
     background-color: @color-dark-grey-2;
   }
@@ -76,18 +76,18 @@
   @media (min-width: @tablet-width) {
     width: 400px;
     height: 267px;
+  }
+}
 
-    &--first {
-      width: 800px;
-      height: 400px;
-    }
+.gallery__image--wide {
+  @media (min-width: @tablet-width) {
+    width: 800px;
+    height: 400px;
   }
 
   @media (min-width: @desktop-width) {
-    &--first {
-      width: 1200px;
-      height: 400px;
-    }
+    width: 1200px;
+    height: 400px;
   }
 }
 
