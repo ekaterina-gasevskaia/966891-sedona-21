@@ -1,3 +1,15 @@
+.presentation {
+  position: relative;
+}
+
+.presentation::before {
+  .design-element-for-mobile (-2px);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .presentation__title {
   .font(bold; 18px; 26px; @color-black);
 
