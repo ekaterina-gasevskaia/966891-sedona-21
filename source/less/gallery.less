@@ -29,6 +29,8 @@
 }
 
 .gallery__item {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     width: 50%;
 
@@ -36,8 +38,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
-
     width: 33.33%;
   }
 }
@@ -91,7 +91,7 @@
   }
 }
 
-.gallery__wrapper {
+.gallery__info-wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
