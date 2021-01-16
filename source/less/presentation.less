@@ -1,17 +1,18 @@
 .presentation {
-  position: relative;
-}
-
-.presentation::before {
-  .design-element-for-mobile (-2px);
+  padding: 31px 0 37px;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    padding: 57px 0 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 61px 0 84px;
   }
 }
 
 .presentation__title {
   .font(bold; 18px; 26px; @color-black);
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -21,11 +22,17 @@
 .presentation__text {
   width: 266px;
   margin: auto;
+  padding: 28px 0 34px;
 
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
     width: 445px;
+    padding: 33px 0 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 78px;
   }
 }
 
@@ -91,6 +98,7 @@
 
 .presentation__button {
   .button-without-styles ();
+  cursor: pointer;
 }
 
 .presentation__button--replay {
@@ -112,6 +120,23 @@
 
   @media (min-width: @tablet-width) {
     fill: @color-white;
+  }
+}
+
+.presentation__button:hover .presentation__icon-path,
+.presentation__button:focus .presentation__icon-path {
+  fill: @color-light-black;
+
+  @media (min-width: @tablet-width) {
+    fill: @color-white-opasity-6;
+  }
+}
+
+.presentation__button:active .presentation__icon-path {
+  fill: @color-light-black-opasity-3;
+
+  @media (min-width: @tablet-width) {
+    fill: @color-light-black-opasity-3;
   }
 }
 
