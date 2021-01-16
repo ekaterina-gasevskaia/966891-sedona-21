@@ -54,15 +54,21 @@
 .presentation__video {
   background-image: url("../img/video-mobile.jpg");
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     width: 100%;
     height: 500px;
 
-    background-image: url("../img/video-tablet.jpg");
-  }
-
-  @media (min-width: @desktop-width) {
     background-image: url("../img/video-desktop.jpg");
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-position: center;
+    }
   }
 }
 
