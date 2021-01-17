@@ -1,4 +1,42 @@
 .presentation {
+  padding: 31px 0 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 0 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 61px 0 84px;
+  }
+}
+
+.presentation__title {
+  .font(bold; 18px; 26px; @color-black);
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.presentation__text {
+  width: 266px;
+  margin: auto;
+  padding: 28px 0 34px;
+
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 445px;
+    padding: 33px 0 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 78px;
+  }
+}
+
+.presentation__wrapper {
   position: relative;
 
   line-height: 0;
@@ -13,37 +51,24 @@
   }
 }
 
-.presentation__title {
-  .font(bold; 18px; 26px; @color-black);
-
-  @media (min-width: @tablet-width) {
-    font-size: 30px;
-  }
-}
-
-.presentation__text {
-  width: 266px;
-  margin: auto;
-
-  line-height: 24px;
-
-  @media (min-width: @tablet-width) {
-    width: 445px;
-  }
-}
-
 .presentation__video {
   background-image: url("../img/video-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     width: 100%;
     height: 500px;
 
-    background-image: url("../img/video-tablet.jpg");
-  }
-
-  @media (min-width: @desktop-width) {
     background-image: url("../img/video-desktop.jpg");
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-position: center;
+    }
   }
 }
 
@@ -79,6 +104,7 @@
 
 .presentation__button {
   .button-without-styles ();
+  cursor: pointer;
 }
 
 .presentation__button--replay {
@@ -100,6 +126,23 @@
 
   @media (min-width: @tablet-width) {
     fill: @color-white;
+  }
+}
+
+.presentation__button:hover .presentation__icon-path,
+.presentation__button:focus .presentation__icon-path {
+  fill: @color-light-black;
+
+  @media (min-width: @tablet-width) {
+    fill: @color-white-opasity-6;
+  }
+}
+
+.presentation__button:active .presentation__icon-path {
+  fill: @color-light-black-opasity-3;
+
+  @media (min-width: @tablet-width) {
+    fill: @color-light-black-opasity-3;
   }
 }
 

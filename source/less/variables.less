@@ -6,10 +6,13 @@
 // Colors
 @color-white: #ffffff;
 @color-white-opasity-2: rgba(255, 255, 255, 0.2);
+@color-white-opasity-3: rgba(255, 255, 255, 0.3);
+@color-white-opasity-6: rgba(255, 255, 255, 0.6);
 @color-black: #000000;
 @color-black-opasity-3: rgba(0, 0, 0, 0.3);
 @color-black-opasity-6: rgba(0, 0, 0, 0.6);
 @color-light-black: #333333;
+@color-light-black-opasity-3: rgba(51,51,51, 0.3);
 @color-blue: #81B3D2;
 @color-light-blue: #9ac2db;
 @color-dark-blue: #678fa8;
@@ -49,10 +52,10 @@
   background-position: @background-position;
 }
 
-.design-element-for-mobile () {
+.design-element-for-mobile (@top) {
   content: "";
   position: absolute;
-  top: 0;
+  top: @top;
   left: 0;
 
   width: 100%;
