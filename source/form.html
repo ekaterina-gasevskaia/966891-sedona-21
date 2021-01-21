@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="page-body">
 <header class="page-header">
@@ -43,7 +43,7 @@
   <section>
     <form class="page-form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="page-form__form page-form__form--acquaintance">
-        <legend class="page-form__title page-form__title--acquaintance">Представьтесь:</legend>
+        <h2 class="page-form__title page-form__title--acquaintance">Представьтесь:</h2>
         <ul class="page-form__list page-form__list--acquaintance">
           <li class="page-form__item page-form__item--acquaintance">
             <label for="name">Имя*:</label>
@@ -60,7 +60,7 @@
         </ul>
       </fieldset>
       <fieldset class="page-form__form page-form__form--contacts">
-        <legend class="page-form__title page-form__title--contacts">Контактная информация:</legend>
+        <h2 class="page-form__title page-form__title--contacts">Контактная информация:</h2>
         <ul class="page-form__list page-form__list--contacts">
           <li class="page-form__item page-form__item--contacts page-form__item--phone">
             <label class="page-form__label-contacts page-form__label-contacts--phone" for="phone"><span class="page-form__label-contacts--hide">Контактный</span> телефон*:</label>
@@ -73,7 +73,7 @@
         </ul>
       </fieldset>
       <fieldset class="page-form__form page-form__form--review">
-        <legend class="page-form__title page-form__title--review">Ваше общее впечатление:</legend>
+        <h2 class="page-form__title page-form__title--review">Ваше общее впечатление:</h2>
         <ul class="page-form__list page-form__list--review">
           <li class="page-form__item page-form__item--review">
             <input class="page-form__radio" type="radio" id="positively" name="review" value="positively" checked>
@@ -90,7 +90,7 @@
         </ul>
       </fieldset>
       <fieldset class="page-form__form page-form__form--famous-place">
-        <legend class="page-form__title page-form__title--famous-place">Посещенные достопримечательности:</legend>
+        <h2 class="page-form__title page-form__title--famous-place">Посещенные достопримечательности:</h2>
         <ul class="page-form__list page-form__list--famous-place">
           <li class="page-form__item page-form__item--famous-place">
             <input class="page-form__checkbox" type="checkbox" id="devils-bridge" name="famous-place" value="devils-bridge" checked>
@@ -111,9 +111,9 @@
         </ul>
       </fieldset>
       <fieldset class="page-form__form page-form__form--comment">
-        <legend class="page-form__title page-form__title--comment">
+        <h2 class="page-form__title page-form__title--comment">
           <label for="comment">Опишите свои эмоции:</label>
-        </legend>
+        </h2>
         <textarea class="page-form__input page-form__input--textarea" id="comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
       <button class="page-form__button button" type="submit"><span class="button-text">Отправить отзыв</span></button>
