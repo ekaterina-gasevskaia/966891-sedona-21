@@ -53,9 +53,12 @@
 
 .presentation__video {
   background-image: url("../img/video-mobile.jpg");
+  background-position: center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
+    background-position: center;
+    background-size: 100%;
   }
 
   @media (min-width: @tablet-width) {
@@ -68,6 +71,7 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
       background-position: center;
+      background-size: 100% 100%;
     }
   }
 }
