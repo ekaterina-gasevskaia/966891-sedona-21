@@ -109,6 +109,7 @@ const watcher = () => {
   ], gulp.series("copyFontsAndIco"));
   gulp.watch("source/img/**/*.{jpg,png,svg}", gulp.series("copyImages"));
   gulp.watch("source/img/**/*.{jpg,png}", gulp.series("createWebp"));
+  gulp.watch("source/js/*.js", gulp.series("js"));
   gulp.watch("build/**").on("change", sync.reload);
 }
 
@@ -127,8 +128,6 @@ const copyFontsAndIco = () => {
 
 exports.copyFontsAndIco = copyFontsAndIco;
 
-//copy
-
 const copyImages = () => {
   return gulp.src(
       "source/img/**/*.{jpg,png,svg}",
@@ -139,6 +138,18 @@ const copyImages = () => {
 }
 
 exports.copyImages = copyImages;
+
+//script
+
+const js = () => {
+  return gulp.src("source/js/*.js",
+    {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"))
+}
+
+exports.js = js;
 
 //clean
 
@@ -158,7 +169,8 @@ const build = gulp.series(
     sprite,
     images,
     createWebp,
-    copyFontsAndIco
+    copyFontsAndIco,
+    js
   )
 )
 
@@ -172,7 +184,8 @@ exports.default = gulp.series(
     sprite,
     createWebp,
     copyFontsAndIco,
-    copyImages
+    copyImages,
+    js
   ),
   gulp.series(
     server,
