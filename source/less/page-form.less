@@ -20,7 +20,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
   margin: 0;
@@ -67,6 +67,7 @@
 
 .page-form__list {
   .list-style;
+  box-sizing: border-box;
 
   text-align: left;
 }
@@ -123,11 +124,11 @@
   padding-top: 19px;
 
   @media (min-width: @tablet-width) {
-    padding: 46px 2px 0 0;
+    padding: 55px 2px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 46px 39px 0 0;
+    padding-right: 39px;
   }
 }
 
@@ -501,6 +502,7 @@
 }
 
 .page-form__list--famous-place {
+  box-sizing: border-box;
   padding: 36px 0 18px 0;
 
   .font(bold; 18px; 26px; @color-black);
@@ -712,6 +714,10 @@
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
+.page-form__popup--closed {
+  display: none;
+}
+
 .page-form__title--popup {
   margin: auto;
   padding: 40px 0 27px 0;
@@ -733,7 +739,6 @@
 .page-form__popup--error {
   bottom: 475px;
 
-  display: none;
   min-height: 280px;
 
   @media (min-width: @tablet-width) {
@@ -785,7 +790,6 @@
 .page-form__popup--successfully {
   bottom: 105px;
 
-  display: none;
   min-height: 323px;
 
   @media (min-width: @tablet-width) {

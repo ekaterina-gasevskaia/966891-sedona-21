@@ -58,16 +58,13 @@
 }
 
 .appointment__map {
-  min-height: 350px;
+  height: 350px;
 
   .background-image (url("../img/map-marker.svg"), url("../img/map-desktop.jpg"); no-repeat, no-repeat; center, center);
+  background-color: @color-back-2;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/map-marker.svg"), url("../img/map-desktop@2x.jpg");
-    background-size: 27px 27px, 1200px auto;
-  }
-
-  @media (min-width: @tablet-width) {
-    min-height: 350px;
+    background-size: 27px 27px, 100% 350px;
   }
 }
