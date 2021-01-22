@@ -12,18 +12,18 @@
     <picture>
       <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
       <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
-      <img class="page-header__image" src="img/logotype-mobile.svg" width="101.7" height="84" alt="Логотип города Седона.">
+      <img class="page-header__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип города Седона.">
     </picture>
   </a>
-  <button class="page-header__toggle page-header__toggle--opened">
-    <span class="visually-hidden">Открыть меню.</span>
+  <button class="page-header__toggle page-header__toggle--opened" aria-label="Открыть или закрыть мобильное меню.">
+    <span class="visually-hidden">Закрыть меню.</span>
   </button>
   <nav class="main-navigation">
     <ul class="main-navigation__list">
       <li class="main-navigation__item"><span class="main-navigation__link main-navigation__link--whereabouts">Главная</span></li>
-      <li class="main-navigation__item"><a class="main-navigation__link link" href="catalog.html">Фото и видео</a></li>
-      <li class="main-navigation__item"><a class="main-navigation__link link" href="form.html">Форма Отзыва</a></li>
-      <li class="main-navigation__item"><a class="main-navigation__link link" href="https://htmlacademy.ru/">HTML ACADEMY</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link link" href="catalog.html" aria-label="Перейти на страницу сайта с фото и видео.">Фото и видео</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link link" href="form.html" aria-label="Перейти на страницу сайта, где вы можете поделиться своими впечатлениями.">Форма Отзыва</a></li>
+      <li class="main-navigation__item"><a class="main-navigation__link link" href="https://htmlacademy.ru/" aria-label="Перейти на сайт профессиональных онлайн-курсов HTMLacademy">HTML ACADEMY</a></li>
     </ul>
   </nav>
 </header>
@@ -144,18 +144,21 @@
       <h2 class="appointment__title">Заинтересовались?</h2>
       <p class="appointment__text">Укажите предполагаемые даты поездки,<br class="appointment__large-screen-port"> и мы покажем вам лучшие предложения гостиниц в
         Cедоне</p>
-      <button class="button appointment__button"><span class="button-text">Найти гостиницу</span></button>
+      <button class="button appointment__button" aria-label="Перейти на страницу с поиском гостиницы."><span class="button-text">Найти гостиницу</span></button>
     </div>
-    <div class="appointment__map"></div>
+    <div class="appointment__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050593959!2d-111.83015779507691!3d34.85437338109022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2ses!4v1611259569503!5m2!1sru!2ses"
+              width="100%" height="350" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
   </section>
 </main>
 <footer class="page-footer">
   <span class="page-footer__hashtag">
-    <a class="link" href="#" title="Поделитесь своими впечатлениями с остальными!">#visitSEDONA</a>
+    <a class="link" href="#" title="Поделитесь своими впечатлениями с остальными!" aria-label="Позволит вам увидеть отзывы тех, кто отдыхал в Седоне.">#visitSEDONA</a>
   </span>
   <ul class="page-footer__social-list">
     <li class="page-footer__social-item">
-      <a class="page-footer__social-button" href="#" title="Твиттер.">
+      <a class="page-footer__social-button" href="#" title="Твиттер." aria-label="Перейти на социальную страницу Седоны в Твиттер.">
         <span class="visually-hidden">Твиттер.</span>
         <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="page-footer__social-path" d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" fill="white"/>
@@ -163,7 +166,7 @@
       </a>
     </li>
     <li class="page-footer__social-item">
-      <a class="page-footer__social-button" href="#" title="Фейсбук.">
+      <a class="page-footer__social-button" href="#" title="Фейсбук." aria-label="Перейти на социальную страницу Седоны в Фейсбук.">
         <span class="visually-hidden">Фейсбук.</span>
         <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="page-footer__social-path" d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6H2C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z" fill="white"/>
@@ -171,7 +174,7 @@
       </a>
     </li>
     <li class="page-footer__social-item">
-      <a class="page-footer__social-button link" href="#" title="Ютуб.">
+      <a class="page-footer__social-button link" href="#" title="Ютуб." aria-label="Перейти на социальную страницу Седоны в Ютуб.">
         <span class="visually-hidden">Ютуб.</span>
         <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="page-footer__social-path" d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" fill="white"/>
@@ -179,7 +182,7 @@
       </a>
     </li>
   </ul>
-    <a class="page-footer__copyright link" href="https://htmlacademy.ru/intensive/adaptive" title="Профессиональный онлайн‑курс HTML и CSS, уровень 2.">
+    <a class="page-footer__copyright link" href="https://htmlacademy.ru/intensive/adaptive" title="Профессиональный онлайн‑курс HTML и CSS, уровень 2." aria-label="Перейти на сайт профессиональных онлайн-курсов HTMLacademy">
       <span class="page-footer__copyright-text">Разработано</span>
       <svg class="page-footer__copyright-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
         <path class="page-footer__copyright-path" fill="#2E368F"
@@ -187,5 +190,6 @@
       </svg>
     </a>
 </footer>
+<script src="js/menu.js"></script>
 </body>
 </html>
