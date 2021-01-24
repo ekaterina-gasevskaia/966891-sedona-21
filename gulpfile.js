@@ -18,6 +18,19 @@ const del = require("del");
 const styles = () => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.styles = styles;
+
+const stylesMin = () => {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
@@ -26,15 +39,15 @@ const styles = () => {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(rename(function(path) {
-      if (!path.extname.endsWith('.map')) {
-        path.basename += '.min';
+      if (!path.extname.endsWith(".map")) {
+        path.basename += ".min";
       }
     }))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
+exports.stylesMin = stylesMin;
 
 //html
 
@@ -86,7 +99,7 @@ exports.createWebp = createWebp;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -101,6 +114,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/less/**/*.less", gulp.series("stylesMin"));
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/img/icons-svg/*.svg", gulp.series("sprite"));
   gulp.watch([
@@ -165,6 +179,7 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     styles,
+    stylesMin,
     html,
     sprite,
     images,
@@ -180,6 +195,7 @@ exports.default = gulp.series(
   clean,
   gulp.parallel(
     styles,
+    stylesMin,
     html,
     sprite,
     createWebp,

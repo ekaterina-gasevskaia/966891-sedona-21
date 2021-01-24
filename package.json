@@ -29,7 +29,7 @@
     "build": "gulp build",
     "start": "gulp",
     "clean": "gulp clean",
-    "build-css": "gulp styles"
+    "build-css": "gulp stylesMin"
   },
   "browserslist": [
     "last 2 versions",
